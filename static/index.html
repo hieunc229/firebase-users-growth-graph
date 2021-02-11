@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Chart</title>
+    <link href="styles.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"></script>
+  </head>
+  <body>
+    <canvas id="myChart" width="400" height="100"></canvas>
+    <div class="controller">
+      <label for="duration">
+        Duration:
+        <select onchange="handleChange(this)" name="duration">
+          <option value="30">Last 30 days</option>
+          <option value="90">Last 90 days</option>
+          <option value="90">Last 180 days</option>
+          <option value="all" selected>All time</option>
+        </select>
+      </label>
+
+      <label for="type">
+        Duration unit:
+        <select onchange="handleChange(this)" name="unit">
+          <option value="day">Daily</option>
+          <option value="week" selected>Weekly</option>
+          <option value="month">Monthly</option>
+          <option value="quarter">Quarterly</option>
+          <option value="year">Yearly</option>
+        </select>
+      </label>
+
+      <label for="type">
+        Chart type:
+        <select onchange="handleChange(this)" name="type">
+          <option value="bar">Bar</option>
+          <option value="line" selected>Line</option>
+        </select>
+      </label>
+
+
+      <label for="type">
+        Display users:
+        <select onchange="handleChange(this)" name="display">
+          <option value="duration" selected>By duration</option>
+          <option value="total">By total</option>
+        </select>
+      </label>
+
+      <button onClick="getData('?refresh=true')" id="refresh">Refresh Data</button>
+    </div>
+    <script src="/scripts.js"></script>
+  </body>
+</html>

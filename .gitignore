@@ -1,0 +1,5 @@
+/config.json
+/exportedData.json
+node_modules
+
+/yarn.lock
