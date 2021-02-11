@@ -1,6 +1,6 @@
 # Firebase User Growth Graph
 
-Generate a user growth graph from your firebase account.
+Generate a user growth graph from your firebase account with Chartjs
 
 ![](demo.png)
 
@@ -16,7 +16,7 @@ Generate a user growth graph from your firebase account.
 To create a Firebase Service Account ([learn more](https://firebase.google.com/docs/admin/setup#initialize-sdk)):
 1. In the Firebase console, open __Settings > Service Account__
 2. Click __Generate New Private Key__, then confirm by clicking __Generate Key__.
-3. Create a `config.json` at the root directory, then copy credential data as the following format 
+3. Create a `config.json` at the root directory, then copy credential data in the following format 
 
 ```json
 // config.json
