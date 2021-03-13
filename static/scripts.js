@@ -1,5 +1,5 @@
 var ctx = document.getElementById("myChart").getContext("2d");
-let data, labels, originData,
+let data, chart, labels, originData,
     type = "line",
     unit = "month",
     display = "duration";
@@ -89,6 +89,12 @@ function getData(search) {
 
 function renderChart() {
 
+    if (chart) {
+        chart.destroy();
+        chart = undefined;
+    }
+
+
     if (display === "duration") {
         data = data.map(r => {
             r.y = r.origin;
@@ -102,7 +108,7 @@ function renderChart() {
         })
     }
 
-    new Chart(ctx, {
+    chart = new Chart(ctx, {
         type,
         data: {
             // labels,
