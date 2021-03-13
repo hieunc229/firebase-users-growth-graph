@@ -2,8 +2,7 @@ import conn from "../config";
 
 const MAX_USERS = 1000;
 
-export
-function listUsers(opts: { pageToken?: string, accumateRecords?: string[], fn: (time: string[]) => void }) {
+export function listUsers(opts: { pageToken?: string, accumateRecords?: string[], fn: (time: string[]) => void }) {
     conn.auth().listUsers(MAX_USERS, opts.pageToken)
         .then(rs => {
 

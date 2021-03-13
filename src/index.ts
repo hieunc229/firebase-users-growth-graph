@@ -9,6 +9,7 @@ const app = express();
 const dataPath = path.join(__dirname, '../exportedData.json');
 
 app.use(express.static(path.join(__dirname, '../static')));
+
 app.get("/data", async (req, res) => {
 
     function handleUsers(data: string[]) {
